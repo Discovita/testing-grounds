@@ -37,10 +37,19 @@ This is the backend server for the State Machine Demo application. It provides t
    pip install -r requirements.txt
    ```
 
-5. Run the development server:
-   ```
-   uvicorn app.main:app --reload
-   ```
+### Starting the Server
+
+You can start the server using either of the following methods:
+
+#### Method 1: Using Python module
+```
+python -m app.main
+```
+
+#### Method 2: Using Uvicorn directly
+```
+uvicorn app.main:app --reload
+```
 
 The API will be available at http://localhost:8000.
 API documentation will be available at http://localhost:8000/docs.

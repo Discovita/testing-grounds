@@ -1,54 +1,91 @@
-# React + TypeScript + Vite
+# State Machine Demo - Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the client-side React application for the State Machine Demo project. The application provides a frontend interface for interacting with the state machine.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* React-based UI with TypeScript
+* Uses Vite for fast development experience
+* React Router for navigation
+* React Query for data fetching
+* Tailwind CSS for styling
 
-## Expanding the ESLint configuration
+## Application Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* `/src/api` - API client and related services
+* `/src/components` - Reusable UI components
+* `/src/context` - React context providers
+* `/src/hooks` - Custom React hooks
+* `/src/layout` - Layout components
+* `/src/lib` - Utility functions and configurations
+* `/src/pages` - Page components
+* `/src/providers` - Provider components
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Main Routes
+* `/` - Home page
+* `/renovation-journey` - Renovation journey page
+* `/admin` - Admin dashboard
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js (v18+ recommended)
+* npm or yarn
+
+### Installation
+
+1. Clone the repository (if you haven't already)
+2. Navigate to the client directory:
+```bash
+cd state_machine_demo/client
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+3. Install dependencies:
+```bash
+npm install
+# or
+yarn install
 ```
+
+### Development
+
+To start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+This will start the development server at [http://localhost:5173](http://localhost:5173) (or another port if 5173 is already in use).
+
+### Building for Production
+
+To build the application for production:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+### Previewing the Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Technologies Used
+
+* React 19
+* TypeScript
+* Vite
+* React Router
+* React Query
+* Tailwind CSS
+* Radix UI components
